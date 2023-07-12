@@ -9,6 +9,8 @@ import './style.css';
 
 
 export function Cwiczenie1() {
+  const [tekst, setTekst] = React.useState('Placeholder');
+  
 
   function handleOnSubmit(event) {
 
@@ -17,7 +19,12 @@ export function Cwiczenie1() {
     console.log('Kliknięto przycisk');
 
     console.log(event);
+ 
+    const trescInputa = event.target[0].value;
 
+    console.log("Treść Inputa: ", trescInputa)
+
+    setTekst(trescInputa)
   }
 
 
@@ -50,7 +57,7 @@ export function Cwiczenie1() {
 
         <div>
 
-          <p>Placeholder</p>
+          <p>{tekst}</p>
 
         </div>
 
